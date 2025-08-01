@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper]{geometry}
+
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\newcommand{\ent}{\vdash}
+\renewcommand{\phi}{\varphi}
+\newcommand{\pure}[1]{\ulcorner #1 \urcorner}
+\newcommand{\imp}{\Rightarrow}
+\renewcommand{\and}{\land}
+
+\title{Laws of the Logic of Bunched Implications in Iris}
+\author{Oliver Soeser}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+First of all, the entailment relation $\ent$ is a preorder, giving us the reflexivity and transitivity laws
+\begin{equation*}
+  P \ent P, \qquad \frac{P \ent Q \quad Q \ent R}{P\ent R}.\\
+\end{equation*}
+Pure propositions have the straightforward introduction and elimination rules
+\begin{equation*}
+  \frac{\phi}{P \ent \pure\phi},\qquad \frac{\phi \imp  (True \ent P)}{\pure\phi \ent P}.
+\end{equation*}
+The usual rules apply for standard conjunction, disjunction, and implication:
+
+\end{document}
