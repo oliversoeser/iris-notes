@@ -11,7 +11,6 @@
 \renewcommand{\phi}{\varphi}
 \newcommand{\pure}[1]{\ulcorner #1 \urcorner}
 \newcommand{\imp}{\Rightarrow}
-\renewcommand{\and}{\land}
 
 \title{Laws of the Logic of Bunched Implications in Iris}
 \author{Oliver Soeser}
@@ -30,5 +29,10 @@ Pure propositions have the straightforward introduction and elimination rules
   \frac{\phi}{P \ent \pure\phi},\qquad \frac{\phi \imp  (True \ent P)}{\pure\phi \ent P}.
 \end{equation*}
 The usual rules apply for standard conjunction, disjunction, and implication:
+\begin{align*}
+  P \land Q \ent P,\qquad P \land Q \ent Q, \qquad \frac{P\ent Q\quad P\ent R}{P\ent Q\land R},\\
+  P \ent P \lor Q,\qquad Q \ent P \lor Q,\qquad \frac{P\ent R\quad Q\ent R}{P\lor Q\ent R},\\
+  \frac{P\land Q\ent R}{P \ent Q\imp R},\qquad\frac{P\ent Q\imp R}{P \land Q \ent R}.
+\end{align*}
 
 \end{document}
